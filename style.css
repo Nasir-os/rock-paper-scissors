@@ -10,33 +10,29 @@
 }
 body{
     background-color: #FFF0E5;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
     align-items: center;
+    grid-template-columns: 1fr 3fr 1fr;
+    row-gap: 3px;
     height: 100vh;
     color: var(--navy-blue);
     font-family: 'Mochiy Pop One', sans-serif;
-    gap: 3em;
     border: var(--navy-blue);
 }
 .game-container{
-    height: 400px;
-    width: 60%;
+    grid-column: 2;
+    height: 350px;
     border: solid 1px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color: var(--navy-blue);
+    align-self: flex-end;
+    background-image: url(/images/background.png);
+    background-size:cover;
+    background-repeat: no-repeat;
 }
-.middle-line{
-    height: 100%;
-    transform: rotate(8deg);
-    border: solid 1px white;
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-}
+
 img{
     height: 200px;
 }
@@ -52,7 +48,9 @@ img{
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
+
 
 button{
     padding: 0.2em 1em;
@@ -71,4 +69,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     gap: 1em;
+    grid-column: 2;
+    align-self: flex-start;
+    justify-self: flex-start;
 }
