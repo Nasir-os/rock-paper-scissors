@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --navy-blue: #10162F;
+}
 body{
     background-color: #FFF0E5;
     display: flex;
@@ -12,21 +15,27 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #10162F;
+    color: var(--navy-blue);
     font-family: 'Mochiy Pop One', sans-serif;
+    gap: 3em;
+    border: var(--navy-blue);
 }
 .game-container{
     height: 400px;
-    width: 50%;
+    width: 60%;
     border: solid 1px;
-    border-radius: 1em;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--navy-blue);
 }
-hr{
+.middle-line{
     height: 100%;
     transform: rotate(8deg);
+    border: solid 1px white;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
 }
 img{
     height: 200px;
@@ -39,13 +48,27 @@ img{
 }
 .player-box, .computer-box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
-button{
-    padding: 0 1em;
-    font-size: 22px;
-    background-color: white;
-    border: none;
 
+button{
+    padding: 0.2em 1em;
+    font-size: 1.2rem;
+    background-color: white;
+    border: solid 1px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: var(--navy-blue) -3px 3px;
+    transform: scale(1.03);
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 }
