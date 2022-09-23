@@ -15,7 +15,8 @@ body{
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 2fr 1fr;
-    row-gap: 3px;
+    grid-auto-rows: min-content;
+    padding-top: 4em;
     height: 100vh;
     color: var(--navy-blue);
     font-family: 'Mochiy Pop One', sans-serif;
@@ -26,28 +27,52 @@ body{
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
-
-
+}
+.player-score, .computer-score{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.player-score span{
+color: #4385F5 ;
+}
+.computer-score span{
+    color: #DC4437;
+}
+.win{
+    color: blueviolet
+    ;
 }
 .game-container{
     grid-column: 2;
-    height: 400px;
+    height: 20em;
     border: none;
     border-radius: 1em;
     display: flex;
-    align-self: flex-end;
+    align-self: flex-start;
     background-image: url(/images/background.png);
     background-size:cover;
     background-repeat: no-repeat;
 }
-
+.player-box, .computer-box{
+    position: relative;
+    transition: all 1s ease-in-out;
+}
 .player-box img{
     transform:rotate(-90deg) rotateX(180deg);
-    height: 200px;
+    height: 12em;
 }
 .computer-box img{
     transform: rotate(-90deg);
-    height: 200px;
+    height: 12em;
+}
+.player-img{
+    position: absolute ;
+    left: 100px;
+}
+.computer-img{
+    position: absolute ;
+    right: 100px;
 }
 .player-box, .computer-box{
     display: flex;
@@ -59,13 +84,11 @@ body{
 }
 .btn-container{
     display: flex;
-    justify-content: space-evenly;
-    margin-top: -8px;
     align-items: center;
-    gap: 2em;
+    gap: 3em;
     grid-column: 2;
+    padding-top: 1em;
     align-self: flex-start;
-    /* justify-self: flex-start; */
 }
 button img{
     height: 40px;
@@ -80,7 +103,6 @@ button{
     cursor: pointer;
     border-radius: 6px;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items:flex-end;
     font-family: 'Open Sans', sans-serif;
