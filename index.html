@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Rock-Paper-Scissors</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="score-cont">
-        <h1 class="player-score">You <span>0</span></h1>
+      <h1 class="player-score">You <span>0</span></h1>
+      <div class="info">
         <p>First to <span class="win">5</span> wins</p>
-        <h1 class="computer-score">Comp <span>0</span></h1>
+        <h3 class="status"></h3>
+      </div>
 
+      <h1 class="computer-score">Comp <span>0</span></h1>
     </div>
     <div class="game-container">
-        <div class="player-box">
-            <img class="player-img" src="/images/rock.png" alt="hand-paper">
-        </div>
-        <div class="computer-box">
-            <img class="comp-img" src="/images/rock.png" alt="hand-rock">
-        </div>
+      <div class="player-box">
+        <img class="player-img" src="/images/rock.png" alt="hand-paper" />
+      </div>
+      <div class="computer-box">
+        <img class="comp-img" src="/images/rock.png" alt="hand-rock" />
+      </div>
     </div>
     <div class="btn-container">
-        <button class="rock-btn"><img src="/images/rock.png" alt=""><h4>rock</h4></button>
-        <button class="paper-btn"><img src="/images/paper.png" alt=""> <h4>paper</h4></button>
-        <button class="scissors-btn"> <img src="/images/scissors.png" alt=""> <h4>scissors</h4></button>
+      <button class="rock-btn">
+        <img src="/images/rock.png" alt="" />
+        <h4>rock</h4>
+      </button>
+      <button class="paper-btn">
+        <img src="/images/paper.png" alt="" />
+        <h4>paper</h4>
+      </button>
+      <button class="scissors-btn">
+        <img src="/images/scissors.png" alt="" />
+        <h4>scissors</h4>
+      </button>
     </div>
-</body>
+  </body>
 </html>

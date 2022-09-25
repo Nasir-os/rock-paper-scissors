@@ -22,6 +22,16 @@ body{
     font-family: 'Mochiy Pop One', sans-serif;
     border: var(--navy-blue);
 }
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.status{
+    border: none;
+}
 .score-cont{
     grid-column: 2;
     display: flex;
