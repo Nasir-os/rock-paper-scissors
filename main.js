@@ -5,6 +5,17 @@ const btns = btnsContainer.querySelectorAll("button");
 let computerScore = document.querySelector(".computer-score span");
 let playerScore = document.querySelector(".player-score span");
 const info = document.querySelector(".status");
+const restartBtn=document.querySelector('.restart-btn');
+
+
+function restartTheGame(){
+  computerScore.textContent=0;
+  playerScore.textContent=0;
+  info.textContent='';
+  compImg.src = "/images/rock.png";
+  playerImg.src = "/images/rock.png";
+  restartBtn.style=`display:none;`;
+}
 
 function getcomputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
