@@ -92,6 +92,7 @@ top: 100px;
     width: 100%;
 }
 .restart-btn{
+    display: none;
     align-self: center;
 }
 .restart-btn button{

@@ -9,13 +9,10 @@ const restartBtn=document.querySelector('.restart-btn');
 
 
 function restartTheGame(){
-  computerScore.textContent=0;
-  playerScore.textContent=0;
-  info.textContent='';
-  compImg.src = "/images/rock.png";
-  playerImg.src = "/images/rock.png";
-  restartBtn.style=`display:none;`;
+ location.reload();
 }
+
+restartBtn.addEventListener('click',restartTheGame);
 
 function getcomputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -63,19 +60,26 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 function checkWinner() {
+  const endGame=function(){
+    restartBtn.style=`display:block;`;
+    btns.forEach((btns)=>btns.style=`cursor:none; pointer-events:none;`);
+  }
   if (playerScore.textContent === "5") {
+    endGame();
     info.textContent = "You win the game";
   } else if (computerScore.textContent === "5") {
+    endGame();
     info.textContent = "You Lost the game";
   } else if (
     playerScore.textContent === "5" &&
     computerScore.textContent === "5"
   ) {
+    endGame();
     info.textContent = "Its a tie game";
   }
 }
 
-function game() {
+function playGame() {
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
       const interID = setInterval(() => {
@@ -102,4 +106,4 @@ function game() {
   });
 }
 
-game();
+playGame();
