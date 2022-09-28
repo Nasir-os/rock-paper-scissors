@@ -42,19 +42,15 @@ function playRound(playerSelection, computerSelection) {
     info.textContent = "You Win! Paper beats Rock";
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     computerScore.textContent++;
-
     info.textContent = "You Lose! Rock beats Scissors";
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     playerScore.textContent++;
-
     info.textContent = "You Win! Rock beats Scissors";
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
     playerScore.textContent++;
-
     info.textContent = "You Win! Scissors beats Paper";
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     computerScore.textContent++;
-
     info.textContent = "You Lose! Scissors beats Paper";
   }
 }
