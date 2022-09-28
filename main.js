@@ -5,14 +5,13 @@ const btns = btnsContainer.querySelectorAll("button");
 let computerScore = document.querySelector(".computer-score span");
 let playerScore = document.querySelector(".player-score span");
 const info = document.querySelector(".status");
-const restartBtn=document.querySelector('.restart-btn');
+const restartBtn = document.querySelector(".restart-btn");
 
-
-function restartTheGame(){
- location.reload();
+function restartTheGame() {
+  location.reload();
 }
 
-restartBtn.addEventListener('click',restartTheGame);
+restartBtn.addEventListener("click", restartTheGame);
 
 function getcomputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -60,10 +59,14 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 function checkWinner() {
-  const endGame=function(){
-    restartBtn.style=`display:block;`;
-    btns.forEach((btns)=>btns.style=`cursor:none; pointer-events:none;`);
-  }
+  const endGame = function () {
+    setTimeout(() => {
+      restartBtn.style = `display:block;`;
+      btns.forEach(
+        (btns) => (btns.style = `cursor:none; pointer-events:none;`)
+      );
+    },500);
+  };
   if (playerScore.textContent === "5") {
     endGame();
     info.textContent = "You win the game";
@@ -82,7 +85,9 @@ function checkWinner() {
 function playGame() {
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
+      btn.classList.add("press");
       const interID = setInterval(() => {
+        btn.classList.remove("press");
         playerImg.src = "/images/rock.png";
         compImg.src = "/images/rock.png";
         compImg.classList.toggle("animate");
@@ -101,7 +106,7 @@ function playGame() {
         }
         playRound(playerSelection, computerSelection);
         checkWinner();
-      }, 1500);
+      }, 1000);
     });
   });
 }
