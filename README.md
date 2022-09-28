@@ -6,7 +6,7 @@ A simple rock-paper-scissors game made with css and html.
 
 ## Demo
 
-https://github.com/Nasir-os/rock-paper-scissors.git
+https://nasir-os.github.io/rock-paper-scissors/
 
 
 ## Screenshots
