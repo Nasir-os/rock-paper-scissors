@@ -11,7 +11,7 @@ https://nasir-os.github.io/rock-paper-scissors/
 
 ## Screenshots
 
-![App Screenshot](/images/screenshot.png)
+![App Screenshot](../images/screenshot.png)
 
 
 ## Lessons Learned
