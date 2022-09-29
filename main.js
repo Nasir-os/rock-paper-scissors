@@ -16,13 +16,13 @@ restartBtn.addEventListener("click", restartTheGame);
 function getcomputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
   if (randomNumber === 3) {
-    compImg.src = "/images/scissors.png";
+    compImg.src = "images/scissors.png";
     return "scissors";
   } else if (randomNumber === 2) {
-    compImg.src = "/images/paper.png";
+    compImg.src = "images/paper.png";
     return "paper";
   } else {
-    compImg.src = "/images/rock.png";
+    compImg.src = "images/rock.png";
     return "rock";
   }
 }
@@ -84,8 +84,8 @@ function playGame() {
       btn.classList.add("press");
       const interID = setInterval(() => {
         btn.classList.remove("press");
-        playerImg.src = "/images/rock.png";
-        compImg.src = "/images/rock.png";
+        playerImg.src = "images/rock.png";
+        compImg.src = "images/rock.png";
         compImg.classList.toggle("animate");
         playerImg.classList.toggle("animate");
       }, 150);
@@ -94,11 +94,11 @@ function playGame() {
         const playerSelection = btn.querySelector("span").textContent;
         const computerSelection = getcomputerChoice();
         if (playerSelection === "scissors") {
-          playerImg.src = "/images/scissors.png";
+          playerImg.src = "images/scissors.png";
         } else if (playerSelection === "paper") {
-          playerImg.src = "/images/paper.png";
+          playerImg.src = "images/paper.png";
         } else {
-          playerImg.src = "/images/rock.png";
+          playerImg.src = "images/rock.png";
         }
         playRound(playerSelection, computerSelection);
         checkWinner();
