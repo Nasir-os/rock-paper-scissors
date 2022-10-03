@@ -43,6 +43,8 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: 1.2em;
+
 }
 .player-score span{
 color: #4385F5 ;
